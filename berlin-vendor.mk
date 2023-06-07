@@ -201,7 +201,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/berlin/proprietary/vendor/etc/thermal-engine-berlin.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-berlin.conf \
     vendor/motorola/berlin/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/motorola/berlin/proprietary/vendor/etc/vhw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vhw.xml \
-    vendor/motorola/berlin/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/motorola/berlin/proprietary/vendor/firmware/CAMERA_ICP_170.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP_170.elf \
     vendor/motorola/berlin/proprietary/vendor/firmware/aw8695_haptic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8695_haptic.bin \
     vendor/motorola/berlin/proprietary/vendor/firmware/aw8695_rtp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8695_rtp.bin \
@@ -268,19 +267,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/berlin/proprietary/vendor/firmware/stmicro-csot-fts3639-21120227-de141027-berlin.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/stmicro-csot-fts3639-21120227-de141027-berlin.ftb \
     vendor/motorola/berlin/proprietary/vendor/firmware/stmicro-visionox-fts3639-21072312-0009200c-berlin.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/stmicro-visionox-fts3639-21072312-0009200c-berlin.ftb \
     vendor/motorola/berlin/proprietary/vendor/firmware/visionox_stm_fts_production_limits.csv:$(TARGET_COPY_OUT_VENDOR)/firmware/visionox_stm_fts_production_limits.csv \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_berlin_ov08a10_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_berlin_ov08a10_qtech.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_berlin_ov16a10_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_berlin_ov16a10_qtech.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_berlin_ov32b40_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_berlin_ov32b40_qtech.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.sensormodule.mot_berlin_s5khm2_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.mot_berlin_s5khm2_qtech.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.default.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.tuned.mot_berlin_ov08a10.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_berlin_ov08a10.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.tuned.mot_berlin_ov16a10.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_berlin_ov16a10.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.tuned.mot_berlin_ov32b40.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_berlin_ov32b40.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/com.qti.tuned.mot_berlin_s5khm2.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.mot_berlin_s5khm2.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/fdconfigpreview.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigpreview.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigpreviewlite.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigvideo.bin \
-    vendor/motorola/berlin/proprietary/vendor/lib/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigvideolite.bin \
     vendor/motorola/berlin/proprietary/vendor/lib64/camera/com.qti.sensormodule.mot_berlin_ov08a10_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.mot_berlin_ov08a10_qtech.bin \
     vendor/motorola/berlin/proprietary/vendor/lib64/camera/com.qti.sensormodule.mot_berlin_ov16a10_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.mot_berlin_ov16a10_qtech.bin \
     vendor/motorola/berlin/proprietary/vendor/lib64/camera/com.qti.sensormodule.mot_berlin_ov32b40_qtech.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.mot_berlin_ov32b40_qtech.bin \
@@ -296,6 +282,11 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/berlin/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
+    libacdbloader \
+    libcamxexternalformatutils \
+    libAndroidAlgSys \
+    libc++_shared \
+    libmaxxeffect-cembedded \
     com.mot.eeprom.mot_gt24p64b_ov08a10_eeprom \
     com.mot.eeprom.mot_gt24p64b_ov16a10_eeprom \
     com.mot.eeprom.mot_gt24p64e_ov32b40_eeprom \
@@ -306,6 +297,7 @@ PRODUCT_PACKAGES += \
     com.qti.sensor.mot_s5khm2 \
     com.arcsoft.node.dc_capture \
     com.arcsoft.node.dc_preview \
+    com.arcsoft.node.smooth_transition \
     com.mot.node.c2d \
     com.qti.camx.chiiqutils \
     com.qti.eisv2 \
@@ -360,6 +352,7 @@ PRODUCT_PACKAGES += \
     com.vidhance.node.ica \
     com.vidhance.node.processing \
     com.vidhance.stats.aec_dmbr \
+    libdepthmapwrapper_secure \
     com.qti.chiusecaseselector \
     com.qti.feature2.anchorsync \
     com.qti.feature2.demux \
@@ -400,15 +393,16 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.mcx.usecase.extension \
     camera.qcom \
     com.qti.chi.override \
-    libacdbloader \
+    fingerprint.goodix.default \
     libarcsoft_distortion_correction \
     libarcsoft_portrait_distortion_correction \
+    libarcsoft_triple_sat \
+    libarcsoft_triple_zoomtranslator \
     libbitmlengine \
     libbitmlenginev2 \
     libc2d_helper \
     libcamera_nn_stub \
     libcamerapostproc \
-    libcamxexternalformatutils \
     libcamxfacialfeatures \
     libcamxfdalgo \
     libcamxfdengine \
@@ -421,6 +415,9 @@ PRODUCT_PACKAGES += \
     libcamxtintlessalgo \
     libchilog \
     libcom.qti.chinodeutils \
+    libgf_ca \
+    libgf_hal \
+    libgoodixhwfingerprint \
     libipebpsstriping \
     libipebpsstriping170 \
     libmmcamera_bestats \
@@ -444,6 +441,8 @@ PRODUCT_PACKAGES += \
     libswregistrationalgo \
     libsynx \
     libthreadutils \
+    libtriplecam_optical_zoom_control \
+    libtriplecam_video_optical_zoom \
     libvideooptfeature \
     libvidhance \
     libvidhance_active_ois \
@@ -455,24 +454,10 @@ PRODUCT_PACKAGES += \
     libvidhance_zoom_stabilization \
     motorola.hardware.camera.desktop@1.0 \
     motorola.hardware.camera.desktop@2.0 \
-    vendor.qti.hardware.camera.postproc@1.0-service-impl \
-    libAndroidAlgSys \
-    libc++_shared \
-    libvideoutils \
-    libmaxxeffect-cembedded \
-    com.arcsoft.node.smooth_transition \
-    libdepthmapwrapper_secure \
-    fingerprint.goodix.default \
-    libarcsoft_triple_sat \
-    libarcsoft_triple_zoomtranslator \
-    libgf_ca \
-    libgf_hal \
-    libgoodixhwfingerprint \
-    libtriplecam_optical_zoom_control \
-    libtriplecam_video_optical_zoom \
     sensors.moto \
     sensors.ssc \
     vendor.goodix.hardware.biometrics.fingerprint@3.0 \
+    vendor.qti.hardware.camera.postproc@1.0-service-impl \
     MotoSignatureApp \
     MotCamera3AI \
     HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND \
