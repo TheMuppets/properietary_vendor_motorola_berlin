@@ -1,0 +1,7 @@
+
+s23403Ñ¯”ù"n
+maxImageHeightò
+maxImageWidth†
+maxSubjectLengthP
+recipientLimit
+smsToMmsTextThreshold
