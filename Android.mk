@@ -6,6 +6,6 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),berlin)
 
-$(call add-radio-file-sha1-checked,radio/bluetooth.img,02b627ad6e363ac4232247c2119d489a4dbee881)
+$(call add-radio-file-sha1-checked,radio/bluetooth.img,fb8429f3a9d5621026bbc89ee907d4bd1fab2f2c)
 
 endif
